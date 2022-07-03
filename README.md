@@ -49,4 +49,4 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
     $ npm start
 
-    Access apis from (http://localhost:8000)
+    Access apis from http://localhost:8000
