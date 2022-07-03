@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "a953feba-28be-4774-8109-0051cb656d25",
+		"name": "SurReal Technologies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Movie Tickets List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Create Movie Ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\" : \"andrew\",\r\n    \"movieTitle\" : \"RRR\",\r\n    \"movieTime\" : \"2022-07-03 13:30:00\",\r\n    \"ticketPrice\": 259.98\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Get Ticket Info By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.Update Ticket Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\" : \"andrew\",\r\n    \"movieTitle\" : \"RRR\",\r\n    \"movieTime\" : \"2022-07-03 13:30:00\",\r\n    \"ticketPrice\": 269.98\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.delete Movie Ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.Analytics Vistors Summary Databse aggregation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/analytics/visited/?method=db-aggregation&startDate=2022-06-02&endDate=2022-07-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"analytics",
+						"visited",
+						""
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "db-aggregation"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-06-02"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.Analytics Vistitors By JS - algorithms",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/analytics/visited/?method=js-algorithms&startDate=2022-06-02&endDate=2022-07-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"analytics",
+						"visited",
+						""
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "js-algorithms"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-06-02"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.Analytics Profile Db Aggregation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/analytics/profit/?method=db-aggregation&startDate=2022-06-02&endDate=2022-07-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"analytics",
+						"profit",
+						""
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "db-aggregation"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-06-02"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.Analytics Profile Db Aggregation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpcm96a2hhbi41MThAZ21haWwuY29tIiwiaWF0IjoxNjU2ODI5NjAxLCJleHAiOjE2NTk0MjE2MDEsInR5cGUiOiJhY2Nlc3MiLCJuYW1lIjoiZmlyb3oga2hhbiBQIiwiZGVzaWduYXRpb24iOiJOb2RlSlMgRGV2ZWxvcGVyIiwicGhvbmUiOiI5MTk0OTMyMjUyMzIifQ.2uxu_etLYduQXDX5Gq0OPw_f87Ub8J1tR0NQZWwmHDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/analytics/profit/?method=js-algorithms&startDate=2022-06-02&endDate=2022-07-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"analytics",
+						"profit",
+						""
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "js-algorithms"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-06-02"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-07-03"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
