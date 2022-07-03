@@ -44,7 +44,6 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     $ git clone https://github.com/firoz0518/movie-ticket-booking.git
     $ cd movie-ticket-booking
     $ npm i
-    $ npm start
 
 ## Running the project
 
